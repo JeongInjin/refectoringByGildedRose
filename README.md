@@ -37,3 +37,9 @@
 다시 한 번 확인하자면, 아이템의 `Quality`는 50 이상으로 증가할 수는 없습니다. 하지만 `Sulfuras`는 전설의 아이템이기 때문에 `Quality` 값은 80이며, 값이 바뀌지 않습니다.
 
 ---
+1.preferences 에서 coverage 세팅 
+
+```text
+approval test 의존성 추가
+    - testImplementation("com.approvaltests:approvaltests:18.5.0")
+```

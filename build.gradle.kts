@@ -20,6 +20,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    //approval test
+    testImplementation("com.approvaltests:approvaltests:18.5.0")
 }
 
 tasks.withType<KotlinCompile> {
