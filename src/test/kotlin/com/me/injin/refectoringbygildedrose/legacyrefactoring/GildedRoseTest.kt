@@ -17,7 +17,8 @@ class GildedRoseTest {
     }
 
     fun doUpdateQuality(name: String, sellIn: Int, quality: Int): String {
-        val sut = GildedRose(arrayOf(Item(name, sellIn, quality)))
+//        val sut = GildedRose(arrayOf(Item(name, sellIn, quality)))
+        val sut = GildedRose(arrayOf(Item.of(name, sellIn, quality)))
         sut.updateQuality()
         return sut.items[0].toString()
     }

@@ -1,31 +1,7 @@
 package com.me.injin.refectoringbygildedrose.legacyrefactoring
 
-open class Item(
-    var name: String = "",
-    var sellIn: Int = 0,
-    var quality: Int = 0
-) {
-    companion object {
-        fun of(name: String, sellIn: Int, quality: Int): Item {
-            when (name) {
-                "Sulfuras, Hand of Ragnaros" -> {
-                    return Sulfuras(sellIn, quality)
-                }
-                "Backstage passes to a TAFKAL80ETC concert" -> {
-                    return Backstage(sellIn, quality)
-                }
-                "Aged Brie" -> {
-                    return Aged(sellIn, quality)
-                }
-                else -> {
-                    return Item(name, sellIn, quality)
-                }
-            }
-        }
-    }
-
-
-    open fun updateQualityFor() {
+class Aged(sellIn: Int, quality: Int) : Item("Aged Brie", sellIn, quality) {
+    override fun updateQualityFor() {
         when (this.name) {
             "Sulfuras, Hand of Ragnaros" -> {
 
@@ -64,10 +40,6 @@ open class Item(
                 }
             }
         }
-    }
-
-    override fun toString(): String {
-        return "Item(name=$name, sellIn=$sellIn, quality=$quality)"
     }
 
 }
