@@ -26,7 +26,6 @@ package com.me.injin.refectoringbygildedrose.legacyrefactoring
  *  PIT 를 이용하면 코드의 변환(mutation)을 자동으로 생성 가능
  */
 class GildedRose(var items: Array<Item>) {
-
     fun updateQuality() {
         items.forEach {
             it.updateQualityFor()
