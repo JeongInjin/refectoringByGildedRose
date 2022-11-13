@@ -27,8 +27,8 @@ package com.me.injin.refectoringbygildedrose.legacyrefactoring
  */
 class GildedRose(var items: Array<Item>) {
     fun updateQuality() {
-        items.forEach {
-            it.updateQualityFor()
+        for (item in items) {
+            item.updateQualityFor()
         }
     }
 }
